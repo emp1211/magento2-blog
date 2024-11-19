@@ -1,2 +1,4 @@
-# magento2-blog
-Blog extension for Magento 2
+# Magento 2 Blog Extension
+
+A Blog extension for Magento 2
+
