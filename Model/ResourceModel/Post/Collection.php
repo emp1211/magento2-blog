@@ -10,7 +10,7 @@ use BlueHeron\Blog\Model\ResourceModel\Post as PostResource;
 
 class Collection extends AbstractCollection
 {
-    private function _construct()
+    protected function _construct()
     {
         $this->_init(Post::class, PostResource::class);
     }

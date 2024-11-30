@@ -10,7 +10,7 @@ class Post extends AbstractDb
 {
     private const TABLE_NAME = 'blueheron_blog_post';
     private const PRIMARY_KEY = 'post_id';
-    private function _construct()
+    protected function _construct()
     {
         $this->_init(self::TABLE_NAME, self::PRIMARY_KEY);
     }

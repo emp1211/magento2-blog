@@ -9,7 +9,7 @@ use BlueHeron\Blog\Model\ResourceModel\Post as PostResource;
 
 class Post extends AbstractModel
 {
-    private function _construct()
+    protected function _construct()
     {
         $this->_init(PostResource::class);
     }
