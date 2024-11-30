@@ -11,6 +11,10 @@
 
     <!-- Form settings -->
     <settings>
+        <buttons>
+            <button name="save" class="BlueHeron\Blog\Block\Adminhtml\Post\Edit\SaveButton" />
+            <button name="back" class="BlueHeron\Blog\Block\Adminhtml\Post\Edit\BackButton" />
+        </buttons>
         <namespace>blueheron_blog_post_form</namespace>
         <dataScope>data</dataScope>
         <deps>
