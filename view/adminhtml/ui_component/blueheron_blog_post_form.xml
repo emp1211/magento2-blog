@@ -29,6 +29,9 @@
                 <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
             </item>
         </argument>
+        <settings>
+            <submitUrl path="blueheron_blog/post/save" />
+        </settings>
         <dataProvider class="BlueHeron\Blog\Model\Post\DataProvider" name="blueheron_blog_post_form_data_source">
             <settings>
                 <requestFieldName>post_id</requestFieldName>
@@ -78,7 +81,7 @@
             <settings>
                 <dataType>text</dataType>
                 <label translate="true">URL Key</label>
-                <dataScope>identifier</dataScope>
+                <dataScope>url_key</dataScope>
             </settings>
         </field>
     </fieldset>
@@ -98,6 +101,7 @@
                     <class name="admin__field-wide">true</class>
                 </additionalClasses>
                 <label/>
+                <notice translate="true">Note: Keyboard shortcut to activate editor help : Alt + 0 (Windows) or &#x2325;0 (MacOS)</notice>
                 <dataScope>content</dataScope>
             </settings>
             <formElements>
