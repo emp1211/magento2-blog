@@ -1,0 +1,24 @@
+<?php
+
+declare(strict_types=1);
+
+use Magento\Framework\View\Element\Template;
+use BlueHeron\Blog\ViewModel\Posts;
+
+$postsViewModel = $block->getData('posts_view_model');
+$collection = $postsViewModel->getPosts(3);
+$blogPager = $block->getChildBlock('blog_pager');
+
+$postBlock = $block->getChildBlock('post');
+
+?>
+<?php if (!$collection->count()): ?>
+    <p>There are no posts in this blog</p>
+<?php else: ?>
+    <?php foreach ($collection as $post): ?>
+        <?= $postsViewModel->getPostHtml($postBlock, $post); ?>
+    <?php endforeach; ?>
+    <?php if ($blogPager): ?>
+        <?= $postsViewModel->getPager($collection, $blogPager); ?>
+    <?php endif; ?>
+<?php endif; ?>
